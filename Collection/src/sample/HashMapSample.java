@@ -1,11 +1,9 @@
 package sample;
 
-import org.w3c.dom.css.CSSImportRule;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HashMapSample {
-    
-    import java.util.HashMap;
-    import java.util.Map;
     
     public static void main(String[] args) {
         Map<String, String> members = new HashMap<>();
@@ -36,7 +34,7 @@ public class HashMapSample {
         
         // 拡張forループによる取得 : keySet
             for (String keyString : members.keySet()) {
-                System.out.println("keySet キー: " + key + ", 値: " + members.get(key));
+                System.out.println("keySet キー: " + keyString + ", 値: " + members.get(keyString));
             }
             
             // 拡張forループによる取得 : values
@@ -45,12 +43,20 @@ public class HashMapSample {
             }
             
             // サイズの取得
+            int size = members.size(); // Mapのサイズを取得
+            System.out.println("Mapのサイズ (クリア前) : " + size);
+            members.clear(); // Mapの内容をクリア
+            System.out.println("Mapのサイズ (クリア後) : " + members.size());
+    }
+    
+    }
+    
             
+    
+    
            
             
-            }
-        }
+            
 
-    }
+    
 
-}
